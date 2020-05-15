@@ -1,0 +1,36 @@
+<header>
+  <div>
+    <div>
+       <!-- <p>Last works >>></p> -->
+    </div>
+   
+    <div>
+      <div>
+        <ul class="nav nav-tabs " id="myTab" role="tablist">
+         
+            <p class="pp">Last works >>></p>
+         
+          <li class="nav-item">
+            <a [routerLink]="[ '/works/censor' ]" routerLinkActive="active" class="nav-link" id="home-tab"
+              data-toggle="tab" role="tab" aria-controls="home" aria-selected="true">Censor</a>
+          </li>
+          <li class="nav-item">
+            <a [routerLink]="[ '/works/tasklist' ]" routerLinkActive="active" class="nav-link" id="contact-tab"
+              data-toggle="tab" role="tab" aria-controls="contact" aria-selected="false">Task List</a>
+          </li>
+          <li class="nav-item">
+            <a [routerLink]="[ '/works/userlist' ]" routerLinkActive="active" class="nav-link" id="profile-tab"
+              data-toggle="tab" role="tab" aria-controls="profile" aria-selected="false">User List</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+  <div>
+    <a [routerLink]="[ '/home' ]" routerLinkActive="active">Back to >>> Home</a>
+  </div>
+
+</header>
+<router-outlet></router-outlet>

@@ -1,0 +1,35 @@
+.img1{
+    background-image: url(imges/3.png);
+    // background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    // min-height: 100px;
+    height: 200px;
+}
+
+.df{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 90vh;
+    width: 100%;
+}
+.cw{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 220px;
+    min-height: 350px;
+    margin: 0 15px;
+}
+.i1{
+background-image: url(imges/3.png);
+}
+.i2{
+background-image: url(imges/2.png);
+}
+.i3{
+background-image: url(imges/1.jpeg);
+}

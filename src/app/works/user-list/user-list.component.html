@@ -1,0 +1,57 @@
+<div class="container cont-center mt-5">
+  <div class="row">
+    <div class="col min-with">
+      <form>
+        <div class="form-group">
+          <label for="loginId"></label>
+          <input type="text" #log class="form-control" [(ngModel)]="loginId" name="loginId" id="loginId"
+            placeholder="Enter login">
+          <!-- <small id="emailHelp" class="form-text text-muted"> Введіть логін коректно</small> -->
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" #pas class="form-control" [(ngModel)]="password" name="password" id="password"
+            placeholder="Enter password">
+        </div>
+        <div class="form-group">
+          <label for="email">Email address</label>
+          <input type="email" #email class="form-control" [(ngModel)]="emailtext" name="emailtext" id="email"
+            aria-describedby="emailHelp" placeholder="Enter email">
+          <!-- <small id="emailHelp" class="form-text text-muted">Введіть коректрий емііл</small> -->
+        </div>
+        <div class="form-group">
+          <button [style.display]="isEditBtn ? 'none' : 'block'" (click)="addUserFun(log.value, pas.value, email.value)"
+            type="button" class="btn btn-danger" [disabled]="isEditBtn">Add
+            user</button>
+          <button [style.display]="!isEditBtn ? 'none' : 'block'" (click)="saveBtn()" type="button"
+            class="btn btn-primary" [disabled]="!isEditBtn">Save user</button>
+        </div>
+      </form>
+    </div>
+    <!-- <div class="f-break"></div> -->
+    <div class="col min-with ">
+      <table class="table mt-4">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Login</th>
+            <th scope="col">Password</th>
+            <th scope="col" class="col-6">Email</th>
+            <th scope="col">Edit</th>
+            <th scope="col">Delete</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let opt of users; let ind = index">
+            <td>{{ind+1}}</td>
+            <td>{{opt.userLogin}}</td>
+            <td>{{opt.userPassword}}</td>
+            <td>{{opt.userEmail}}</td>
+            <td><button (click)="editBtnFun(ind)" class="btn btn-success" [disabled]="isEditBtn">Edit</button> </td>
+            <td><button (click)="deleteBtnFun(ind)" class="btn btn-danger" [disabled]="isEditBtn">Delete</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
